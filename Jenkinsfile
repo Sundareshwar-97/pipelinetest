@@ -6,6 +6,7 @@ pipeline {
                 echo 'executing python'
                 sh 'python3 pyscript.py'
             }
+        }
             stage('shell execution') {
                 steps {
                     echo 'executing shell'
@@ -18,3 +19,5 @@ pipeline {
                 build job: 'testpipeline1', parameters: [string(name: 'STR_VAL', value: 'the name')]
             }
         }
+    }
+}
